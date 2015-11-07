@@ -1,0 +1,25 @@
+{
+  "name": "lista-telefonica",
+  "version": "1.0.0",
+  "description": "Uma lista telefonica simples",
+  "main": "contatosBackend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miqueiaspenha/cursoangularjsrbranas"
+  },
+  "keywords": [
+    "lista",
+    "telefonica"
+  ],
+  "author": "Miqueias Penha",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/miqueiaspenha/cursoangularjsrbranas/issues"
+  },
+  "dependencies": {
+    "body-parser": "~1.14.1"
+  }
+}
