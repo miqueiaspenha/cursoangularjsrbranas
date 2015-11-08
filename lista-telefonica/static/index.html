@@ -20,6 +20,8 @@
 	<script src="js/filters/ellipsisFilter.js"></script>
 	<script src="js/value/configValue.js"></script>
 	<script src="js/directives/uiAlertDirective.js"></script>
+	<script src="js/directives/uiDateDirective.js"></script>
+	<script src="js/directives/uiAccodionDirective.js"></script>
 </head>
 <body ng-controller="listaTelefonicaCtrl">
 	<div class="jumbotron">
@@ -27,6 +29,18 @@
 		<ui-alert title="Ops, aconteceu um problema!">
 			{{error}}
 		</ui-alert>
+
+		<ui-accordions>
+			<ui-accordion title="Accordion1">
+				Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+			</ui-accordion>
+			<ui-accordion title="Accordion2">
+				Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+			</ui-accordion>
+		</ui-accordions>
+
+		<hr/>
+
 		<input class="form-control" type="text" ng-model="criteiroDeBusca" placeholder="O que voçê está procurando?">
 		<table class="table">
 			<thead>
@@ -56,6 +70,8 @@
 		<form name="contatoForm">
 			<input class="form-control" type="text" ng-model="contato.nome" name="nome" placeholder="Nome" ng-required="true" ng-minlength="5" />
 			<input class="form-control" type="text" ng-model="contato.telefone" name="telefone" placeholder="Telefone" ng-required="true" ng-pattern="/^\d{4,5}-\d{4}$/" />
+			{{contato.data}}
+			<input class="form-control" type="text" ng-model="contato.data" name="data" placeholder="data" ui-date />
 			<select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome + ' (' + (operadora.preco | currency ) + ')' group by operadora.categoria for operadora in operadoras | orderBy:'nome'">
 				<option value=""> Selecione uma operadora</option>
 			</select>
